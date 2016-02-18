@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{varwidth}
 
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -51,25 +52,44 @@
 
 \begin{document}
 
-\maketitle % Insert title
+	\maketitle % Insert title
 
-\thispagestyle{fancy} % All pages have headers and footers
+	\thispagestyle{fancy} % All pages have headers and footers
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\begin{abstract}
+	\begin{abstract}
+		\noindent Página Web 
+	\end{abstract}
 
-\noindent Página Web 
-
-\end{abstract}
-
-
-		\section{Introducción}
+		\section{Compañeros de grupo de trabajo}
+			
+			\begin{center}
+				\begin{varwidth}{\textwidth}
+					\begin{itemize}
+						\item Amigo Alonso, Alberto
+						\item Delgado Álvarez, Sergio
+						\item Fernández Angulo, Oscar
+					\end{itemize}
+				\end{varwidth}
+			\end{center}
+			
+		\section{Descripción del Problema}
 		
-		\paragraph{}
-		Página Web
+			\paragraph{}
+			Página Web
+
+		\section{Usuarios Objetivo}
+		
+			\paragraph{}
+			Página Web
+
+		\section{Borrador de Solución}
+		
+			\paragraph{}
+			Página Web
 
 
 
