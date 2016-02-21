@@ -62,15 +62,15 @@
 %----------------------------------------------------------------------------------------
 
 	\begin{abstract}
-		\noindent Página Web 
+		\noindent Página Web
 	\end{abstract}
-	
+
 %----------------------------------------------------------------------------------------
 %	TEXT
 %----------------------------------------------------------------------------------------
 
 		\section{Proposición de Compañeros del grupo de trabajo}
-			
+
 			\begin{center}
 				\begin{varwidth}{\textwidth}
 					\begin{itemize}
@@ -80,33 +80,48 @@
 					\end{itemize}
 				\end{varwidth}
 			\end{center}
-			
+
 		\section{Descripción del Problema}
-		
+
 			\paragraph{}
 			El transporte es una actividad del sector terciario, entendida como el desplazamiento de objetos o personas de un lugar (punto de origen) a otro (punto de destino) en un vehículo (medio o sistema de transporte) que utiliza una determinada infraestructura (red de transporte). Esta ha sido una de las actividades terciarias que mayor expansión ha experimentado a lo largo de los últimos dos siglos, debido a la industrialización; al aumento del comercio y de los desplazamientos humanos tanto a escala nacional como internacional; y los avances técnicos que se han producido y que han repercutido en una mayor rapidez, capacidad, seguridad y menor coste de los transportes. \cite{wikipedia_transporte}
-			
+
 			\paragraph{}
-			Nosotros nos centraremos en el transporte de mercancías para la realización de esta propuesta. En este sector existen tres roles bien diferenciados: el \textbf{remitente}, el \textbf{transportista} y el \textbf{destinatario}. El modelo de negocio actual se basa en empresas intermediarias denominadas \textit{agencias de transporte} cuya labor es poner en contacto remitentes con transportistas que lleven la mercancía hasta su destino. 
-			
+			Nosotros nos centraremos en el transporte de mercancías para la realización de esta propuesta. En este sector existen tres roles bien diferenciados: el \textbf{remitente}, el \textbf{transportista} y el \textbf{destinatario}. El modelo de negocio actual se basa en empresas intermediarias denominadas \textit{agencias de transporte} cuya labor es poner en contacto remitentes con transportistas que lleven la mercancía hasta su destino.
+
 			\paragraph{}
 			Dependiendo de cómo se contrate el transporte existen dos formas de pago: por parte del remitente, del destinatario o respecto de una determinada proporción. Actualmente el método más utilizado es el de pago por parte del destinatario pero aún así existen casos especiales en los que no. También existen dos métodos de calcular el precio del transporte: aplicando una tarifa fija (lo cual muchas veces infla los costes de manera innecesaria) o teniendo en cuenta la distancia recorrida desde el origen hasta el destino. Uno de los problemas actuales es el de calcular penalizaciones y recompensas por el tiempo de transporte así como el periodo de tiempo que transcurre durante la carga y descarga de la mercancía.
-			
+
 			\paragraph{}
 			La solución que se propone es crear un servicio encargado de conectar a transportistas con remitentes y destinatarios de manera eficiente y automática tratando de reducir los costes entre intermediarios, dando lugar a un mayor beneficio para el transportista y un menor coste para el remitente/destinatario. En la siguiente sección se describirá más detalladamente tanto las acciones como la descripción de cada uno de los usuarios objetivo.
-			
+
 			\paragraph{}
 			El servicio seguirá una idea similar a la de Uber \copyright\  con el transporte de pasajeros pero aplicado al campo de las mercancías (siempre siguiendo la vigente normativa). Ya existen algunas start-ups que pretenden hacerse un hueco en este nicho de mercado entre las que destacan Convoy \copyright\ y Trucker Path \copyright\ las cuales se basan en una aplicación para sistemas móviles. \cite{expansion_uber_transporte}
-			
-			
-			
-		\section{Usuarios Objetivo}
-		
-			\paragraph{}
-			Página Web
 
+
+
+		\section{Usuarios Objetivo}
+
+			\paragraph{}
+			Los usuarios objetivo del servicio serán los siguientes:
+
+			\begin{itemize}
+				
+				\item{\textbf{Remitente}}
+				\newline
+				El remitente será la persona de crear el envío. Debido a esto es quien debe introducir todos los datos de dirección, tanto los suyos para que el transportista pueda recoger el envío, como los del destinatario para que este pueda llegar hasta él. Además será también el que seleccione el método de pago para luego proceder al pago según la opción seleccionada, bien por parte del propio remitente o por parte del destinatario. El precio no es algo que se fijará "a priori", sino que será después cuando los transportistas encuentren el envío cuando pujarán por un precio de transporte. Tendra la capacidad de monitorizar el estado del envío.
+
+				\item{\textbf{Transportistas}}
+				\newline
+				El transportista es la persona encargada de llevar el envío desde el lugar de origen hasta el de destino. El sistema se encargará de permitir al transportista encontrar envíos disponibles en la base de datos y "pujar" un precio por el servicio para que después el encargado de pagar por ello seleccione la opción que más le convenga.
+
+				\item{\textbf{Destinatario}}
+				\newline
+				El destinatario es quién recibirá el envío. En el caso de ser el encargado del pago tendrá la responsabilidad también de elegir el transportista. En caso contrario su única labor será la de fijar el horario preferido de entrega a la vez que monitorizar el estado del envío.
+
+			\end{itemize}
 		\section{Borrador de la Solución}
-		
+
 			\paragraph{}
 			Página Web
 
@@ -114,14 +129,14 @@
 %	Bibliographic references
 %----------------------------------------------------------------------------------------
 	\begin{thebibliography}{9}
-	
-		\bibitem{wikipedia_transporte} 
+
+		\bibitem{wikipedia_transporte}
 		Wikipedia. Transporte. \url{https://es.wikipedia.org/wiki/Transporte}
 
-		\bibitem{expansion_uber_transporte} 
+		\bibitem{expansion_uber_transporte}
 		Expansión. Se busca el Uber del transporte de mercancías. \url{http://www.expansion.com/economia-digital/2015/10/29/5630ef8e46163f932a8b45d9.html}
-	
+
 	\end{thebibliography}
- 
+
 
 \end{document}
