@@ -141,7 +141,11 @@
 		\section{Borrador de la Solución}
 
 			\paragraph{}
-			Página Web
+			El servicio web estara estructurado para navegación por pestañas y vistas emergentes que se superpongan encima del resto del contenido de la página preferiblemente sin crear una nueva ventana emergente del navegador.
+
+			\paragraph{}
+			A continuación procederemos a describir el conjunto de vistas que formarán el servicio web. Dado que existen dos roles bien diferenciados (remitente/destinatario y transportista) las vistas que sean comunes a los dos pero tengan pequeñas diferencias se desribirán juntas explicando dichas variaciones.
+
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.7\textwidth}
@@ -150,7 +154,8 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
+			La vista de \textbf{login} será lo primero que el usuario vea al acceder al sitio web, en esta parte se identificará o creará una cuenta en el caso de que no la tuviera todavía.
+
 
 
 			\begin{figure}[H]
@@ -164,8 +169,7 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
-
+			En la vista de \textbf{crear cuenta} es donde el usuario introducirá sus datos personales. Esta parte será común para los dos roles. Además habrá un checkbutton que el usuario deberá marcar en el caso de que sea transportista. Entonces en la vista aparecerán nuevos campos donde este deberá introducir las caracteristicas de su método de transporte (tamaño, peso máximo, tipo de envíos que puede transportar, etc). En este punto el sistema ya tendrá diferenciados los dos roles.
 
 			\begin{figure}[H]
 				\centering
@@ -180,7 +184,7 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
+			La vista que de \textbf{página principal} del sitio web. En ella se le mostrará información acerca de los envíos en curso, los que están pendientes de confirmación (para que los confirme en el caso del cliente y para saber si han sido confirmados y debe dirigirse al lugar de recogida en el caso del transportista). Además también habrá una sección destinada a dar la opinión acerca de anteriores envíos en el caso de los clientes. En el de los transportistas esta sección estará compuesta por las valoraciones que los clientes le han dado.
 
 
 			\begin{figure}[H]
@@ -196,7 +200,7 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
+			La vista de \textbf{envíos} será la que permitirá al usuario obtener el historial de envíos posibilitandose un buscador para filtrar la información además de unas pestañas para filtrar entre paquetes enviados y recibidos. Esta página también será común para clientes y transportistas con la diferencia de que los transportistas no tendrán la posibilidad de seleccionar entre paquetes enviados y recibidos.
 
 
 			\begin{figure}[H]
@@ -212,7 +216,10 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
+			La vista de \textbf{estadisticas} servirá para que los usuarios puedan obtener información gráficamente de manera rápida sobre envíos pasados. Tendrán un gráfico de líneas en el cual se mostrará la evolución del número de envíos respecto del tiempo. Además también tendrán otras métricas como el número de veces que han usado el mismo transportista en el caso del cliente y a la inversa en el caso del transportista. También podrán obtener métricas acerca de los orígenes y destinos a los que se han enviado pedidos, etc.
+
+			\paragraph{}
+			Las siguientes vistas serán de tipo emergente, es decir, se superpondrán al resto del contenido de la página. Si es posible se intentará hacer sin utilizar ventanas.
 
 
 			\begin{figure}[H]
@@ -224,7 +231,7 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
+			La vista de \textbf{crear envío} será única para los clientes. En esta introducirán información acerca de qué quieren enviar, desde dónde hasta dónde, en qué fecha, etc. El cliente además tendrá la posibilidad de introducir imágenes del paquete que después el transportista podrá visualizar antes de solicitar realizar el envío.
 
 
 			\begin{figure}[H]
@@ -236,7 +243,7 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
+			La vista de \textbf{buscar envíos} será única para los transportistas. En esta vista los transportistas introducirán su ubicación actual o pulsarán en un botón que se la reconozca automáticamente y seguidamente el sistema les devolverá un listado los envíos disponibles más cercanos. Seguidamente el transportista podrá introducir un precio por el que está dispuesto a realizar el envío.
 
 
 			\begin{figure}[H]
@@ -248,7 +255,7 @@
 			\end{figure}
 
 			\paragraph{}
-			Página Web
+			La vista de \textbf{envío} será similar para los clientes y transportistas. En ella se mostrará información acerca del envío, así como el transcurso del mismo. También habrá posibilidad de escribir comentarios en ella para que el remitente, el destinatario y el transportista se puedan comunicar, lo que permitirá una  mayor satisfacción del servicio de transporte tanto por los clientes como por los transportistas.
 %----------------------------------------------------------------------------------------
 %	Bibliographic references
 %----------------------------------------------------------------------------------------
