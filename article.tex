@@ -4,6 +4,7 @@
 \usepackage{lipsum} % Package to generate dummy text throughout this template
 \usepackage{varwidth}
 \usepackage{hyperref}
+\usepackage{graphicx}
 
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -89,7 +90,7 @@
 			Nosotros nos centraremos en el transporte de mercancías para la realización de esta propuesta. En este sector existen tres roles bien diferenciados: el \textbf{remitente}, el \textbf{transportista} y el \textbf{destinatario}. El modelo de negocio actual se basa en empresas intermediarias denominadas \textit{agencias de transporte} cuya labor es poner en contacto remitentes con transportistas que lleven la mercancía hasta su destino.
 
 			\paragraph{}
-			Dependiendo de cómo se contrate el transporte existen dos formas de pago: por parte del remitente, del destinatario o respecto de una determinada proporción. Actualmente el método más utilizado es el de pago por parte del destinatario pero aún así existen casos especiales en los que no. También existen dos métodos de calcular el precio del transporte: aplicando una tarifa fija (lo cual muchas veces infla los costes de manera innecesaria) o teniendo en cuenta la distancia recorrida desde el origen hasta el destino. Uno de los problemas actuales es el de calcular penalizaciones y recompensas por el tiempo de transporte así como el periodo de tiempo que transcurre durante la carga y descarga de la mercancía.
+			Dependiendo de la manera en que se contrate el transporte existen dos formas de pago: por parte del remitente, del destinatario o respecto de una determinada proporción. Actualmente el método más utilizado es el de pago por parte del destinatario pero aún así existen casos especiales en los que no. También existen dos métodos de calcular el precio del transporte: aplicando una tarifa fija (lo cual muchas veces infla los costes de manera innecesaria) o teniendo en cuenta la distancia recorrida desde el origen hasta el destino. Uno de los problemas actuales es el de calcular penalizaciones y recompensas por el tiempo de transporte así como el periodo de tiempo que transcurre durante la carga y descarga de la mercancía.
 
 			\paragraph{}
 			La solución que se propone es crear un servicio encargado de conectar a transportistas con remitentes y destinatarios de manera eficiente y automática tratando de minimizar los costes entre intermediarios, dando lugar a un mayor beneficio para el transportista y un menor coste para el remitente/destinatario. En la siguiente sección se describirá más detalladamente tanto las acciones como la descripción de cada uno de los usuarios objetivo.
@@ -126,7 +127,7 @@
 
 				\item{\textbf{Remitente}}
 				\newline
-				El remitente será la persona de crear el envío. Debido a esto es quien debe introducir todos los datos de dirección, tanto los suyos para que el transportista pueda recoger el envío, como los del destinatario para que este pueda llegar hasta él. Además será también el que seleccione el método de pago para luego proceder al pago según la opción seleccionada, bien por parte del propio remitente o por parte del destinatario. El precio no es algo que se fijará "a priori", sino que será después cuando los transportistas encuentren el envío cuando pujarán por un precio de transporte. Tendrá la capacidad de monitorizar el estado del envío.
+				El remitente será la persona encargada de crear el envío. Debido a ello es quien debe introducir todos los datos de dirección, tanto los suyos para que el transportista pueda recoger el envío, como los del destinatario para que este pueda llegar hasta él. Además será el que seleccione el método de pago para luego proceder al pago según la opción seleccionada, bien por parte del propio remitente o por parte del destinatario. El precio no es algo que se fijará "a priori", sino que será después cuando los transportistas encuentren el envío cuando pujarán por un precio de transporte. Tendrá la capacidad de monitorizar el estado del envío.
 
 				\item{\textbf{Transportistas}}
 				\newline
@@ -140,8 +141,121 @@
 		\section{Borrador de la Solución}
 
 			\paragraph{}
-			Página Web
+			El servicio web estara estructurado para navegación por pestañas y vistas emergentes que se superpongan encima del resto del contenido de la página preferiblemente sin crear una nueva ventana emergente del navegador.
 
+			\paragraph{}
+			A continuación procederemos a describir el conjunto de vistas que formarán el servicio web. Dado que existen dos roles bien diferenciados (remitente/destinatario y transportista) las vistas que sean comunes a los dos pero tengan pequeñas diferencias se desribirán juntas explicando dichas variaciones.
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.7\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_login.png}
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{login} será lo primero que el usuario vea al acceder al sitio web, en esta parte se identificará o creará una cuenta en el caso de que no la tuviera todavía.
+
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_create_account.png}
+				\end{minipage}
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_create_account_carrier.png}
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			En la vista de \textbf{crear cuenta} es donde el usuario introducirá sus datos personales. Esta parte será común para los dos roles. Además habrá un checkbutton que el usuario deberá marcar en el caso de que sea transportista. Entonces en la vista aparecerán nuevos campos donde este deberá introducir las caracteristicas de su método de transporte (tamaño, peso máximo, tipo de envíos que puede transportar, etc). En este punto el sistema ya tendrá diferenciados los dos roles.
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_home.png}
+
+				\end{minipage}
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_home_carrier.png}
+
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista que de \textbf{página principal} del sitio web. En ella se le mostrará información acerca de los envíos en curso, los que están pendientes de confirmación (para que los confirme en el caso del cliente y para saber si han sido confirmados y debe dirigirse al lugar de recogida en el caso del transportista). Además también habrá una sección destinada a dar la opinión acerca de anteriores envíos en el caso de los clientes. En el de los transportistas esta sección estará compuesta por las valoraciones que los clientes le han dado.
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_deliveries.png}
+
+				\end{minipage}
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_deliveries_carrier.png}
+
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{envíos} será la que permitirá al usuario obtener el historial de envíos posibilitandose un buscador para filtrar la información además de unas pestañas para filtrar entre paquetes enviados y recibidos. Esta página también será común para clientes y transportistas con la diferencia de que los transportistas no tendrán la posibilidad de seleccionar entre paquetes enviados y recibidos.
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_stats.png}
+
+				\end{minipage}
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_stats_carrier.png}
+
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{estadisticas} servirá para que los usuarios puedan obtener información gráficamente de manera rápida sobre envíos pasados. Tendrán un gráfico de líneas en el cual se mostrará la evolución del número de envíos respecto del tiempo. Además también tendrán otras métricas como el número de veces que han usado el mismo transportista en el caso del cliente y a la inversa en el caso del transportista. También podrán obtener métricas acerca de los orígenes y destinos a los que se han enviado pedidos, etc.
+
+			\paragraph{}
+			Las siguientes vistas serán de tipo emergente, es decir, se superpondrán al resto del contenido de la página. Si es posible se intentará hacer sin utilizar ventanas.
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.7\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_create_delivery.png}
+
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{crear envío} será única para los clientes. En esta introducirán información acerca de qué quieren enviar, desde dónde hasta dónde, en qué fecha, etc. El cliente además tendrá la posibilidad de introducir imágenes del paquete que después el transportista podrá visualizar antes de solicitar realizar el envío.
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.7\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_search_deliveries.png}
+
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{buscar envíos} será única para los transportistas. En esta vista los transportistas introducirán su ubicación actual o pulsarán en un botón que se la reconozca automáticamente y seguidamente el sistema les devolverá un listado los envíos disponibles más cercanos. Seguidamente el transportista podrá introducir un precio por el que está dispuesto a realizar el envío.
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.7\textwidth}
+					\includegraphics[width=\textwidth]{res/sketch_delivery.png}
+
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{envío} será similar para los clientes y transportistas. En ella se mostrará información acerca del envío, así como el transcurso del mismo. También habrá posibilidad de escribir comentarios en ella para que el remitente, el destinatario y el transportista se puedan comunicar, lo que permitirá una  mayor satisfacción del servicio de transporte tanto por los clientes como por los transportistas.
 %----------------------------------------------------------------------------------------
 %	Bibliographic references
 %----------------------------------------------------------------------------------------
