@@ -173,76 +173,87 @@
 		\section{Borrador de la Solución}
 
 			\paragraph{}
-			El servicio web estara estructurado para navegación por pestañas y vistas emergentes que se superpongan encima del resto del contenido de la página preferiblemente sin crear una nueva ventana emergente del navegador.
+			La estructura de navegación por la página web será de scroll infinito siguiendo la idea que actualmente están llevando a cabo las principales redes sociales como Facebook \copyright y  Twitter \copyright. Hemos escogido esta idea en vez de la navegación por pestañas de la propuesta individual porque creemos que será más sencillo de utilizar para la mayoría de los usuarios.
 
 			\paragraph{}
-			A continuación procederemos a describir el conjunto de vistas que formarán el servicio web. Dado que existen dos roles bien diferenciados (remitente/destinatario y transportista) las vistas que sean comunes a los dos pero tengan pequeñas diferencias se desribirán juntas explicando dichas variaciones.
+			A continuación procederemos a describir el conjunto de vistas que formarán el servicio web. Dado que existen dos roles bien diferenciados (cliente y transportista) las vistas que sean comunes a los dos pero tengan pequeñas diferencias se describirán juntas explicando dichas variaciones.
 
 			\begin{figure}[H]
 				\centering
-				\begin{minipage}[b]{0.7\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_login.png}
+				\begin{minipage}[b]{0.8\textwidth}
+					\includegraphics[width=\textwidth]{res/Login.png}
 				\end{minipage}
 			\end{figure}
 
 			\paragraph{}
-			La vista de \textbf{login} será lo primero que el usuario vea al acceder al sitio web, en esta parte se identificará o creará una cuenta en el caso de que no la tuviera todavía.
-
+			La vista de \textbf{login} será lo primero que el usuario visualizará al acceder al sitio web, en esta parte se identificará o creará una cuenta en el caso de que no la tuviera todavía.
 
 
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_create_account.png}
+					\includegraphics[width=\textwidth]{res/CrearCuenta.png}
 				\end{minipage}
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_create_account_carrier.png}
+					\includegraphics[width=\textwidth]{res/CrearCuentaTransportista.png}
 				\end{minipage}
 			\end{figure}
 
 			\paragraph{}
 			En la vista de \textbf{crear cuenta} es donde el usuario introducirá sus datos personales. Esta parte será común para los dos roles. Además habrá un checkbutton que el usuario deberá marcar en el caso de que sea transportista. Entonces en la vista aparecerán nuevos campos donde este deberá introducir las caracteristicas de su método de transporte (tamaño, peso máximo, tipo de envíos que puede transportar, etc). En este punto el sistema ya tendrá diferenciados los dos roles.
 
+			\paragraph{}
+			Primero describiremos las vistas que el cliente podrá visualizar y luego nos centraremos en las del transportista.
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.8\textwidth}
+					\includegraphics[width=\textwidth]{res/PaginaPrincipal.png}
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{página principal} del sitio web. Será la que se mostrará al iniciar sesión como remitente en el sitio web. En ella se mostrará al cliente información acerca de los envíos que están en curso, los que están pendientes de confirmación para que los confirme seleccionando el transportista que más desee. También se le mostrarán los envíos ya finalizados para que si lo desea pueda introducir la opinión acerca de anteriores envíos. Esta página tendrá un scroll infinito en el cual se le mostrarán todos los envíos que ha realizado. Además en la parte superior de la página habrá una barra de búsqueda que permitirá filtrar envíos por origenes, destinos, fechas, etc. lo cual permitirá encontrar cualquier envío anterior de manera sencilla. También hay un botón en la parte superior derecha cuya función es la de crear nuevos envíos.
+
+
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_home.png}
+					\includegraphics[width=\textwidth]{res/ExpansionEnvioPendienteAsignacion.png}
 
 				\end{minipage}
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_home_carrier.png}
+					\includegraphics[width=\textwidth]{res/ExpansionEnvioEnProceso.png}
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			Las dos vistas que se adjuntan en la imagen superior se corresponden con la información que se muestra al clickar (se abre un menu desplegable inferiormente) en los envíos que todavía no están confirmados, y un envío en progreso, este ultimo sera comun para ambos tipos de usuario.
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/DetallesTransportista.png}
+
+				\end{minipage}
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/ConfirmacionAsignacion.png}
 
 				\end{minipage}
 			\end{figure}
 
 			\paragraph{}
-			La vista que de \textbf{página principal} del sitio web. En ella se le mostrará información acerca de los envíos en curso, los que están pendientes de confirmación (para que los confirme en el caso del cliente y para saber si han sido confirmados y debe dirigirse al lugar de recogida en el caso del transportista). Además también habrá una sección destinada a dar la opinión acerca de anteriores envíos en el caso de los clientes. En el de los transportistas esta sección estará compuesta por las valoraciones que los clientes le han dado.
-
-
-			\begin{figure}[H]
-				\centering
-				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_deliveries.png}
-
-				\end{minipage}
-				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_deliveries_carrier.png}
-
-				\end{minipage}
-			\end{figure}
-
-			\paragraph{}
-			La vista de \textbf{envíos} será la que permitirá al usuario obtener el historial de envíos posibilitandose un buscador para filtrar la información además de unas pestañas para filtrar entre paquetes enviados y recibidos. Esta página también será común para clientes y transportistas con la diferencia de que los transportistas no tendrán la posibilidad de seleccionar entre paquetes enviados y recibidos.
-
+			La imagen superior ilustra el caso de que un cliente consulte el perfil de un transportista y seguidamente quiera confirmar que lo realice ese transportista.
 
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_stats.png}
+					\includegraphics[width=\textwidth]{res/Estadisticas.png}
 
 				\end{minipage}
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_stats_carrier.png}
+					\includegraphics[width=\textwidth]{res/EstadisticasTransportista.png}
 
 				\end{minipage}
 			\end{figure}
@@ -257,25 +268,40 @@
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.7\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_create_delivery.png}
+					\includegraphics[width=\textwidth]{res/CrearEnvio.png}
 
 				\end{minipage}
 			\end{figure}
 
 			\paragraph{}
 			La vista de \textbf{crear envío} será única para los clientes. En esta introducirán información acerca de qué quieren enviar, desde dónde hasta dónde, en qué fecha, etc. El cliente además tendrá la posibilidad de introducir imágenes del paquete que después el transportista podrá visualizar antes de solicitar realizar el envío.
+			
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.7\textwidth}
+					\includegraphics[width=\textwidth]{res/PaginaPrincipalTransportista.png}
+
+				\end{minipage}
+			\end{figure}
+			
+			\paragraph{}
+			La vista de \textbf{pagina principal transportista}, sera la pagina principal que se visualizara al iniciar sesion como transportista. Es muy similar a la pagina principal del remitente. En ella el cliente podra consultar todos los envios que esta realizando en este momento, los que ya ha completado... Tambien tendra la posibilidad de buscar un nuevo envio si asi lo desea. Las vistas que se mostraran al hacer click sobre los diferentes envios que aparecen en la pagina principal seran similares a las descritas anteriormente.
 
 
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.7\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_search_deliveries.png}
+					\includegraphics[width=\textwidth]{res/BuscarEnviosTransportista.png}
+
+				\end{minipage}
+				\begin{minipage}[b]{0.7\textwidth}
+					\includegraphics[width=\textwidth]{res/ConfirmacionDePuja.png}
 
 				\end{minipage}
 			\end{figure}
 
 			\paragraph{}
-			La vista de \textbf{buscar envíos} será única para los transportistas. En esta vista los transportistas introducirán su ubicación actual o pulsarán en un botón que se la reconozca automáticamente y seguidamente el sistema les devolverá un listado los envíos disponibles más cercanos. Seguidamente el transportista podrá introducir un precio por el que está dispuesto a realizar el envío.
+			La vista de \textbf{buscar envíos} será única para los transportistas. En esta vista los transportistas introducirán su ubicación actual o utilizaran la barra de busqueda y seguidamente el sistema les devolverá un listado los envíos disponibles más cercanos. Seguidamente el transportista podrá revisar la informacion de los diferentes envios, y si lo desea pujar por aquellos que le interesen.
 
 
 			\begin{figure}[H]
@@ -287,7 +313,10 @@
 			\end{figure}
 
 			\paragraph{}
-			La vista de \textbf{envío} será similar para los clientes y transportistas. En ella se mostrará información acerca del envío, así como el transcurso del mismo. También habrá posibilidad de escribir comentarios en ella para que el remitente, el destinatario y el transportista se puedan comunicar, lo que permitirá una  mayor satisfacción del servicio de transporte tanto por los clientes como por los transportistas.
+			La vista de \textbf{envío} se corresponde con la informacion mostrada al hacer click sobre uno de los envios que aparecen listados en la página de busqueda, y en ella el transportista podra realizar una oferta para realizar el envio. La vista de \textbf{confirmar puja} se mostrara para confirmar que la puja introducida por el transportista es la deseada.
+			
+			\paragraph{}
+			Ambas vistas seran de tipo emergente, se superpondran al resto del contenido dejandolo oscurecido en un segundo plano.
 %----------------------------------------------------------------------------------------
 %	Bibliographic references
 %----------------------------------------------------------------------------------------
