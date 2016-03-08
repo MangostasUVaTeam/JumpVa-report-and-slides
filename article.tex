@@ -161,46 +161,58 @@
 			\paragraph{}
 			En la vista de \textbf{crear cuenta} es donde el usuario introducirá sus datos personales. Esta parte será común para los dos roles. Además habrá un checkbutton que el usuario deberá marcar en el caso de que sea transportista. Entonces en la vista aparecerán nuevos campos donde este deberá introducir las caracteristicas de su método de transporte (tamaño, peso máximo, tipo de envíos que puede transportar, etc). En este punto el sistema ya tendrá diferenciados los dos roles.
 
+			\paragraph{}
+			Primero describiremos las vistas que el cliente podrá visualizar y luego nos centraremos en las del transportista.
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.8\textwidth}
+					\includegraphics[width=\textwidth]{res/PaginaPrincipal.png}
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			La vista de \textbf{página principal} del sitio web. Será la que se mostrará al iniciar sesión en el sitio web. En ella se mostrará al cliente información acerca de los envíos que están en curso, los que están pendientes de confirmación para que los confirme seleccionando el transportista que más desee. También se le mostrarán los envíos ya finalizados para que si lo desea pueda introducir la opinión acerca de anteriores envíos. Esta página tendrá un scroll infinito en el cual se le mostrarán todos los envíos que ha realizado. Además en la parte superior de la página habrá una barra de búsqueda que permitirá filtrar envíos por origenes, destinos, fechas, etc. lo cual permitirá encontrar cualquier envío anterior de manera sencilla. También hay un botón en la parte superior derecha cuya función es la de crear nuevos envíos.
+
+
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_home.png}
+					\includegraphics[width=\textwidth]{res/ExpansionEnvioPendienteAsignacion.png}
 
 				\end{minipage}
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_home_carrier.png}
+					\includegraphics[width=\textwidth]{res/ExpansionEnvioEnProceso.png}
+				\end{minipage}
+			\end{figure}
+
+			\paragraph{}
+			Las dos vistas que se adjuntan en la imagen superior se corresponden con la información que se muestra al clickar (se abre un menu desplegable inferiormente) en los envíos que todavía no están confirmados, y un envío en progreso.
+
+
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/DetallesTransportista.png}
+
+				\end{minipage}
+				\begin{minipage}[b]{0.49\textwidth}
+					\includegraphics[width=\textwidth]{res/ConfirmacionAsignacion.png}
 
 				\end{minipage}
 			\end{figure}
 
 			\paragraph{}
-			La vista que de \textbf{página principal} del sitio web. En ella se le mostrará información acerca de los envíos en curso, los que están pendientes de confirmación (para que los confirme en el caso del cliente y para saber si han sido confirmados y debe dirigirse al lugar de recogida en el caso del transportista). Además también habrá una sección destinada a dar la opinión acerca de anteriores envíos en el caso de los clientes. En el de los transportistas esta sección estará compuesta por las valoraciones que los clientes le han dado.
-
-
-			\begin{figure}[H]
-				\centering
-				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_deliveries.png}
-
-				\end{minipage}
-				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_deliveries_carrier.png}
-
-				\end{minipage}
-			\end{figure}
-
-			\paragraph{}
-			La vista de \textbf{envíos} será la que permitirá al usuario obtener el historial de envíos posibilitandose un buscador para filtrar la información además de unas pestañas para filtrar entre paquetes enviados y recibidos. Esta página también será común para clientes y transportistas con la diferencia de que los transportistas no tendrán la posibilidad de seleccionar entre paquetes enviados y recibidos.
-
+			La imagen superior ilustra el caso de que un cliente consulte el perfil de un transportista y seguidamente quiera confirmar que lo realice ese transportista.
 
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_stats.png}
+					\includegraphics[width=\textwidth]{res/Estadisticas.png}
 
 				\end{minipage}
 				\begin{minipage}[b]{0.49\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_stats_carrier.png}
+					\includegraphics[width=\textwidth]{res/EstadisticasTransportista.png}
 
 				\end{minipage}
 			\end{figure}
@@ -215,7 +227,7 @@
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[b]{0.7\textwidth}
-					\includegraphics[width=\textwidth]{res/sketch_create_delivery.png}
+					\includegraphics[width=\textwidth]{res/CrearEnvio.png}
 
 				\end{minipage}
 			\end{figure}
