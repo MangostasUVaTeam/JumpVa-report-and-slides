@@ -112,21 +112,44 @@
 		\section{Usuarios Objetivo}
 
 			\paragraph{}
-			Los usuarios objetivo del servicio serán los siguientes:
+			Los usuarios objetivo del sistema se dividen en dos grupos bien diferenciados:
 
 			\begin{itemize}
 
-				\item{\textbf{Remitente}}
-				\newline
-				El remitente será la persona encargada de crear el envío. Debido a ello es quien debe introducir todos los datos de dirección, tanto los suyos para que el transportista pueda recoger el envío, como los del destinatario para que este pueda llegar hasta él. Además será el que seleccione el método de pago para luego proceder al pago según la opción seleccionada, bien por parte del propio remitente o por parte del destinatario. El precio no es algo que se fijará "a priori", sino que será después cuando los transportistas encuentren el envío cuando pujarán por un precio de transporte. Tendrá la capacidad de monitorizar el estado del envío.
 
-				\item{\textbf{Transportistas}}
-				\newline
-				El transportista es la persona encargada de llevar el envío desde el lugar de origen hasta el de destino. El sistema se encargará de permitir al transportista encontrar envíos disponibles en la base de datos y "pujar" un precio por el servicio para que después el encargado de pagar por ello seleccione la opción que más le convenga.
+				\item{\textbf{Transportista}}
 
-				\item{\textbf{Destinatario}}
-				\newline
-				El destinatario es quién recibirá el envío. En el caso de ser el encargado del pago tendrá la responsabilidad también de elegir el transportista. En caso contrario su única labor será la de fijar el horario preferido de entrega a la vez que monitorizar el estado del envío.
+				\paragraph{}
+				El transportista es la persona encargada de llevar el envío desde el lugar de origen hasta el de destino.
+
+				\paragraph{}
+				El sistema, por tanto, tendrá la labor de permitirle encontrar envíos que se ajusten a las requisitos que el transportista requiera como localización del punto de partida, del de llegada, fecha, tipo de transporte, etc. Una vez que el transportista encuentre un envío que pretenda realizar deberá fijar un precio por el cual estaría dispuesto a llevarlo a cabo. A partir de este punto deberá esperar la confirmación del cliente para dirigirse al punto de partida.
+
+				\paragraph{}
+				Además de esto el sistema también ofrecerá al transportista la posibilidad de notificar hitos al cliente tales como que su envío a sufrido algún contratiempo o que se ha completado cierta distancia.
+
+				\paragraph{}
+				El transportista también tendrá la posibilidad de acceder a información de anteriores env
+
+
+				\item{\textbf{Cliente}}
+				\paragraph{}
+
+				\begin{itemize}
+
+					\item{\textbf{Remitente}}
+					\paragraph{}
+					El remitente será la persona encargada de crear el envío. Debido a ello es quien debe introducir todos los datos de dirección, tanto los suyos para que el transportista pueda recoger el envío, como los del destinatario para que este pueda llegar hasta él. Además será el que seleccione el método de pago para luego proceder al pago según la opción seleccionada, bien por parte del propio remitente o por parte del destinatario. El precio no es algo que se fijará "a priori", sino que será después cuando los transportistas encuentren el envío cuando pujarán por un precio de transporte. Tendrá la capacidad de monitorizar el estado del envío.
+
+					\item{\textbf{Destinatario}}
+					\paragraph{}
+					El destinatario es quién recibirá el envío. En el caso de ser el encargado del pago tendrá la responsabilidad también de elegir el transportista. En caso contrario su única labor será la de fijar el horario preferido de entrega a la vez que monitorizar el estado del envío.
+
+				\end{itemize}
+
+
+
+
 
 			\end{itemize}
 		\section{Borrador de la Solución}
