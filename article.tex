@@ -80,12 +80,14 @@
 			El nombre elegido para el sistema será \textbf{JumpVa}
 
 			\paragraph{}
-			Los cambios que se han realizado desde la primera propuesta han sido tanto del modelo de negocio de la empresa como de la implementación del diseño del sitio web. En cuanto al modelo de negocio, se ha añadido el rol de cliente-receptor (no realiza un envio, sino que requiere de alguien le recoja un paquete y se lo envie). Los cambios sobre el diseño se pueden ver en el documento desarrollado, aunque se enumeran a continuación:
+			Los cambios que se han realizado desde la primera propuesta han sido tanto del modelo de negocio de la empresa como de la implementación del diseño del sitio web. En cuanto al modelo de negocio, se ha añadido el rol de cliente-remitente (no realiza un envio, sino que requiere de alguien le recoja un paquete y se lo envie). Los cambios sobre el diseño se pueden ver en el documento desarrollado, aunque se enumeran a continuación:
 
 				\begin{enumerate}
+					\item Se han unificado los roles de remitente y destinatario en cliente, que dependiendo del envío actuará como remitente o destinatario según sea conveniente.
+
 					\item Se facilita a los transportistas las rutas de los envios por los que pueden pujar mediante mapas, para que puedan diseñar sus propias rutas de transporte y aprovechar el camino para realizar varios pedidos.
 
-					\item Se diferencian más rotundamente los roles de transportista y remitente, especializando los comportamientos que pueden realizar cada uno.
+					\item Se diferencian más rotundamente los roles de transportista y cliente, especializando los comportamientos que pueden realizar cada uno.
 
 					\item La página de inicio que se muestra a los usuarios es directamente el historial de envios que tienen pendientes/finalizados. Esto proporciona agilidad a los usuarios en la experiencia de navegación por la web.
 
@@ -93,7 +95,7 @@
 
 					\item Se pasa del modelo de tablas que representan cada envio por un modelo de tarjetas desplegables. Cada tarjeta desplegable puede albergar mucha mas infomación que la tabla, por lo que se comprime mas la información sin llegar a resultar un problema de navegación.
 
-					\item Se incorpora la plataforma de marcado de hitos. Cuando un remitente realiza un pago, marca la acción para que el transportista sepa que debe verificarlo.
+					\item Se incorpora la plataforma de marcado de hitos. Cuando un cliente realiza un pago, marca la acción para que el transportista sepa que debe verificarlo.
 				\end{enumerate}
 
 
