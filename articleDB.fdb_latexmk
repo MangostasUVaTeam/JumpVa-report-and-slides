@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1462966528 "articleDB.tex" "articleDB.pdf" "articleDB" 1462966539
-  "./articleDB.aux" 1462966539 1184 9da3cf525d1978cb462d6c254f8adbca ""
-  "./articleDB.out" 1462966539 145 9377ef9228330301d39774893bc01a98 ""
-  "./articleDB.tex" 1462966527 5553 ae73fa75fef7a6326a079f41c857b938 ""
-  "./database.png" 1462964382 90941 43033207cdd8b87a372c068d9e440ad9 ""
+["pdflatex"] 1462967342 "articleDB.tex" "articleDB.pdf" "articleDB" 1462967353
+  "./articleDB.aux" 1462967353 1244 4e628997fae95c7680b5301bbbdac5e3 ""
+  "./articleDB.out" 1462967353 145 9377ef9228330301d39774893bc01a98 ""
+  "./articleDB.tex" 1462967341 5747 86080b3eb3cfa66cc1580083ccb470ff ""
+  "./database.png" 1462966657 91064 c76c40cb8233135c51ac0c9ec821fe4b ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecbx2488.tfm" 1136768653 3584 0181dbc4d429c3ba4e30feba37b5df96 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/eccc0800.tfm" 1136768653 3072 5562a343e50379dfabacc9e86b80781c ""
@@ -106,12 +106,12 @@
   "/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/mcb.lua" 1368398313 9471 33967fdd8d1a4ddde6c30c6aa497ca9e ""
   "/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/modutils.lua" 1368398313 4422 65d17d518cef47d7f1a00d8f211f0add ""
   "/usr/local/texlive/2015/texmf-var/web2c/luatex/lualatex.fmt" 1447407593 1888218 74e529194274d7280e2dc304d9939adf ""
-  "articleDB.aux" 1462966539 1184 9da3cf525d1978cb462d6c254f8adbca ""
-  "articleDB.out" 1462966539 145 9377ef9228330301d39774893bc01a98 ""
-  "articleDB.tex" 1462966527 5553 ae73fa75fef7a6326a079f41c857b938 ""
-  "database.png" 1462964382 90941 43033207cdd8b87a372c068d9e440ad9 ""
+  "articleDB.aux" 1462967353 1244 4e628997fae95c7680b5301bbbdac5e3 ""
+  "articleDB.out" 1462967353 145 9377ef9228330301d39774893bc01a98 ""
+  "articleDB.tex" 1462967341 5747 86080b3eb3cfa66cc1580083ccb470ff ""
+  "database.png" 1462966657 91064 c76c40cb8233135c51ac0c9ec821fe4b ""
   (generated)
-  "articleDB.pdf"
   "articleDB.log"
-  "articleDB.aux"
   "articleDB.out"
+  "articleDB.aux"
+  "articleDB.pdf"

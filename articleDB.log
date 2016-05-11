@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.11.13)  11 MAY 2016 13:35
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.11.13)  11 MAY 2016 13:49
  restricted \write18 enabled.
  file:line:error style messages enabled.
 **articleDB.tex
@@ -442,21 +442,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <database.png, id=12, 597.432pt x 381.8265pt>
 File: database.png Graphic file (type png)
  <use database.png>
-Package pdftex.def Info: database.png used on input line 93.
+Package pdftex.def Info: database.png used on input line 97.
 (pdftex.def)             Requested size: 418.25368pt x 267.3175pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 95.
+(Font)              <7> on input line 99.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 95.
+(Font)              <5> on input line 99.
  [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
  [2<./database.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
  (./articleDB.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `articleDB.out' has not changed.
 (rerunfilecheck)             Checksum: 9377EF9228330301D39774893BC01A98;145.
 
@@ -464,20 +464,20 @@ Package rerunfilecheck Info: File `articleDB.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.88pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
 )
 
 Here is how much of LuaTeX's memory you used:
  9310 strings out of 494693
  100000,319454 words of node,token memory allocated
- 297 words of node memory still in use:
+ 298 words of node memory still in use:
    2 hlist, 1 vlist, 1 rule, 2 glue, 47 glue_spec, 1 write nodes
-   avail lists: 2:25,3:91,4:842,5:127,6:2248,7:35,8:8,9:123,10:215
+   avail lists: 2:25,3:96,4:884,5:132,6:2399,7:35,8:8,9:126,10:223
  12659 multiletter control sequences out of 65536+600000
  49 fonts using 1936651 bytes
  41i,10n,43p,414b,335s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb>
-Output written on articleDB.pdf (2 pages, 181812 bytes).
+Output written on articleDB.pdf (2 pages, 182049 bytes).
 
 PDF statistics: 60 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
