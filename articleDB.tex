@@ -66,50 +66,27 @@
 %----------------------------------------------------------------------------------------
 %	TEXT
 %----------------------------------------------------------------------------------------
+	\section{Casos de uso implementados}
+		\paragraph{}
+		Implementación de la solicitud de ingreso en el sistema, con su correspondiente acceso a la base de datos y el sistema de tokens para mantener la sesión del usuario conectado. (Las credenciales se pueden ver en el script de población de la base de datos, en la tabla Usuario).
 
+		\paragraph{}
+		Creación dinámica de la lista de envios asociados a un usuario. En este caso, aparecerán para el remitente los que se han insertado por defecto en el script de población.
 
-	\section{Tablas}
-	    \paragraph{}
-	    Tablas de la base de datos:
-	    \begin{enumerate}
-				\item \textbf {TipoEnvio}
-				    \paragraph{}
-				    Almacena el tipo y valor del tipo de envio.
-				\item \textbf {TipoHito}
-			        \paragraph{}
-			        Almacena el tipo y valor del tipo de hito.
-				\item \textbf {TipoEstado}
-				    \paragraph{}
-				    Almacena el tipo y valor del tipo de estado.
-
-				\item \textbf {Usuario}
-			        \paragraph{}
-			        Almacena el email, número de usuario, fecha de nacimiento y localización del usuario.
-				\item \textbf {Remitente}
-					\paragraph{}
-					Almacena el email del remitente.
-
-				\item \textbf {Transportista}
-				    \paragraph{}
-					Almacena el email, número de licencia, peso máximo asignable al transporte, paquetes, líquidos, animales que se envían y vehículos del transportista.
-
-				\item \textbf {Envio}
-					\paragraph{}
-					Almacena el número de envío, email, peso, tipo, dimensiones del envío, fecha de envio, fecha de recogida, destino, origen, valoración y estado del envío.
-
-			    \item \textbf {Puja}
-			        \paragraph{}
-			        Almacena el email del que puja, el número de envio, la oferta pujada y si la puja ha sido o no aceptada.
-
-
-				\item \textbf {Hito}
-					\paragraph{}
-					Almacena el número de envío, el número de hito, el mensaje, el tipo y la fecha de creación.
-
-		\end{enumerate}
-
+		\paragraph{}
+		Añadir hitos a los diferentes envios. Se pueden insertar en la base de datos nuevos hitos y dinámicamente se actualizan en la tabla principal de envios.
     \section{Descripción de la estructura de la base de datos}
 
+    		\paragraph{}
+		En la figura adjunta se muestra el esquema de las tablas resultantes del modelo E/R, con todos sus atributos, subrayadas las claves primarias y marcadas con flechas las claves ajenas.
+
+		\paragraph{}
+		A continuación se exponen las justificaciones oportunas sobre las que se basa el diseño de estas tablas:
+		\begin{enumerate}
+			\item Las tablas TipoHito, TipoEnvio y TipoEstado sirven para almacenar todos los códigos de este tipo de operaciones. Es decir, al existir solo cuatro tipos de envíos, en TipoEnvio se guardan las definiciones de estos cuatro tipos y desde las tablas que las referencian se puede conocer estos valores por el código, sin necesidad de almacenar de nuevo el nombre del tipo.
+			\item Transportista y Remitente son especializaciones de Usuario, por lo que sobre esta última se almacena la infomación común a ambas y mediante las dos primeras se puede conocer qué tipo de usuario es cada uno a partir del email.
+			\item Para conseguir los envios a los que está asociado un Transportista, es necesario usar el enlace con la tabla Puja. Esto es así porque los envios de los transportistas son referencias a los envios que un Remitente ha creado, luego habría que replicar el envío varias veces si se almacenase dentro de la tabla Envio. Esto nos proporciona una mejor gestión del espacio de almacenamiento..
+		\end{enumerate}
 
 		\begin{figure}[H]
 			\centering
