@@ -496,6 +496,34 @@
 		\end{itemize}
 
 
+	\section{Mapa del sitio:}
+
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{sitemap.png}
+		\end{figure}
+
+	\section{Guía de Uso}
+
+		\paragraph{}
+		Dado que la página web está hecha con Angular.js y se ha utilizado una única página raíz en la cual se van incluyendo las distintas partes según convenga, para probar la página hay que ejecutar \textbf{web/index.html}.
+
+		\paragraph{}
+		En esta primera vista podemos encontrar dos botones azules, que sirven para crearse una cuenta e iniciar sesión en el sistema. Al no tener que implementar la funcionalidad del sistema (aunque buena parte ha sido adelantada), se han habilitado dos botones verdes de muestra para poder simular los casos de hacer login con una cuenta de transportista y de cliente.
+
+		\paragraph{}
+		La página de inicio es muy similar para efectos del transportista y del cliente. En esta vista podemos encontrar los envíos en los que cada uno está participando, con dos diferencias notables:
+
+		\begin{enumerate}
+				\item Para los envios sin asignar, los transportistas tienen la etiqueta \textbf{pendiente} mientras que los clientes tienen \textbf{no asignado}.
+				\item En la barra superior el cliente tiene la opción de elegir la opción \textbf{crear envío}, desde la que accederá al menú modal con el formulario para solicitar un envío. El transportista, sin embargo, podrá hacer uso de la opción \textbf{buscar envío}, en la que le aparecerán los envíos sobre los que puede pujar.
+		\end{enumerate}
+
+		\paragraph{}
+		\textit{Importante}: Para probar las distintas funcionalidades del cliente y el transportista, \textbf{cerrar sesión} en vez de usar el botón de atrás del navegador. Esta opción se encuenta pulsando en el nombre del usuario de la esquina superior izquierda.
+
+		El desarrollo de esta web ha sido probado con los siguientes navegadores web: Mozilla Firefox, Google Chrome (ejecutando desde un servidor, por políticas de seguridad) y Safari.
 
 
 	\section{Casos de uso implementados}
