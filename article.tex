@@ -336,6 +336,167 @@
 		\paragraph{}
 		Ambas vistas seran de tipo emergente, se superpondran al resto del contenido dejandolo oscurecido en un segundo plano.
 
+	\section{Especificación de requisitos:}
+
+		\paragraph{}
+		Requisitos funcionales: El sistema deberá...
+
+			\begin{itemize}
+				\item registrar nuevos usuarios.
+				\item crear un nuevo envío.
+				\item buscar un envío en su historial.
+				\item cambiar el estado de los envíos.
+				\item permitir al usuario puntuar los envíos.
+				\item guardar un historial de los envíos (información).
+				\item permitir a los usuarios consultar el estado de los envíos.
+				\item actualizar el progreso de los envíos.
+				\item permitir a los transportistas pujar por un envío.
+				\item permitir a los transportistas añadir hitos a un envío.
+				\item asegurar que todos los usuarios están previamente identificados en el sistema para poder acceder a cualquier función.
+				\item notificar al usuario nuevas incidencias en los envíos.
+				\item permitir a los remitentes consultar el historial de los transportistas relacionados con el envío.
+				\item permitir a los remitentes puntuar al transportista que ha realizado su envío.
+				\item permitir a los transportistas realizar una oferta para un evento.
+				\item pedir una confimación para realizar una oferta.
+				\item pedir una confimación para asignar un envío.
+				\item permitir al transportista buscar nuevos envíos.
+			\end{itemize}
+
+			\paragraph{}
+			Requisitos no funcionales: El sistema deberá...
+
+				\begin{itemize}
+					\item usar una base de datos como medio de almacenamiento.
+					\item permitir hacer login a los usuarios que están en la base de datos.
+				\end{itemize}
+	\section{Casos de uso:}
+
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=\textwidth]{astah/casos_de_uso.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_crear_cuenta.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_definir_transportista.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_buscar_ubicacion.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_buscar_palabras_clave.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_pujar.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_anadir_hito.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_finalizar_envio.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_consultar_envio.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_identificarse.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_asignar_envio.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_anadir_mensaje.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_crear_envio.png}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=0.75\textwidth]{astah/use_case_puntuar.png}
+		\end{figure}
+
+	\section{Modelo del dominio:}
+
+		\begin{figure}[H]
+			\centering
+				\includegraphics[width=\textwidth]{astah/entidad_relacion.png}
+		\end{figure}
+
+
+	\section{Análisis de los usuarios:}
+
+		\paragraph{}
+		Los usuarios que utilizarán el sistema se dividen en dos grupos bien diferenciados, los que lo utilizarán como herramienta para encontrar "ofertas de trabajo", es decir, los \textbf{transportistas}, y los que lo utilizarán como un servicio de mensajería, es decir, los \textbf{clientes}.
+
+		\paragraph{}
+		Una vez determinada esta dicotomía pasaremos a describir los 4 perfiles de usuarios objetivo a los cuales está dirigido el sistema:
+
+		\begin{itemize}
+			\item \textbf{Transportista Veterano:} \\
+				Este perfil de usuario se caracteriza por representar a los trabajadores que han invertido la mayor parte de su etapa laboral en este sector, es decir, conocen bien cómo funciona y no quieren que les "enseñen" a hacer su trabajo. Se localizan en un rango de edad medio-alto (35-55 años). El nivel medio de estudios es básico. Este grupo de usuarios no está muy familiarizado con las nuevas tecnologías y por tanto requiere que el uso de estas sea lo más intuitivo posible. A pesar de estas dificultades se deciden a probar el sistema buscando una mayor cuota de transportes que por otras vias como agencias de transportes. A pesar de ello son bastante incrédulos con las ventajas que esperan recibir al usar el sistema. \\ \\
+				\textit{Persona Ficticia: Paco es un camionero de 48 años cuya experiencia laboral se reduce al sector del transporte. Hasta ahora había dependido de una agencia de transportes que le planificaba los envíos pero debido a recomendaciones de compañeros del sector más jóvenes se ha decidido a probar el sistema aunque no está demasiado convencido de sus resultados.}
+
+			\item \textbf{Transportista Fan de las Nuevas Tecnologías:} \\
+				Este perfil se diferencia del anterior por englobar a población más jóven (18-35 años) y con un nivel superior de estudios. No tienen miedo a probar nuevas características del sistema y suele gustarles tener una mayor interacción con el cliente. Debido a estas características también son mucho más críticos con el sistema, quejándose mucho más por los fallos o situaciones anómalas que puedan surjir. La motivación que les lleva a utilizar el sistema es el aumento de satisfacción y eficiencia al realizar su trabajo lo cual buscan en un sector tan sacrificado como el del transporte. \\ \\
+				\textit{Persona Ficticia: Juan es un chico de 21 años. Obviamente como todo joven de hoy en día no tiene dificultades para manejarse con sistemas informáticos. Tras terminar el bachillerato se ha estado preparando para obtener la licencia de transportista. Recientemente por fin obtuvo el título y con unos ahorros se ha comprado una furgoneta de segunda mano. A pesar de no haber trabajado nunca tiene mucha motivación y ha decidido fijarse en el sistema para probar suerte por primera vez.}
+
+			\item \textbf{Cliente para uso Empresarial:} \\
+				A diferencia de los anteriores, este perfil de usuario ve el sistema como un servicio de mensajería en vez de como una herramienta de trabajo. Además estos clientes no utilarán el sistema para beneficio propio, sino en nombre de una empresa, es decir, podrían ser trabajadores de un departamento de logística. El rango de edad en este caso es muy amplio ya que probablemente no usarán el sistema por su propia voluntad, sino porque se lo impone su empresa. El nivel de estudios de este grupo de usuarios es alto y por lo general están familiarizados con el uso de las nuevas tecnologías. Están muy interesados en la visualización de estadísticas sobre envíos recibidos y envíados para tratar de optimizar y reducir costes en futuros envíos.\\ \\
+				\textit{Persona Ficticia: Cristina es una trabajadora de una gran empresa del sector automovilístico. Trabaja en una de sus filiales en el departamento de logistica por lo cual tiene que gestionar envíos entre diferentes filiales y concesionarios. La empresa en la que trabaja quiere reducir sus costes por lo que ha decidido empezar a usar progresivamente el sistema y promete confiar todo su flujo de envíos en él si los resultados son los esperados.}
+
+			\item \textbf{Cliente para uso Personal:} \\
+				Este grupo de usuarios se caracteriza por ser el único grupo de usuarios que usa el servicio para fines personales. En este grupo se encuentran personas jóvenes que no tienen miedo a sufrir riesgos (ya que por lo general personas de una edad más avanzada son reacios a utilizar sistemas de este tipo por miedo a que su mercancia no llegue al destino). Utilizan las nuevas tecnologías a diario y por ello están familiarizados con servicios similares. El nivel de estudios de este grupo es muy variado. La motivación a la hora de usar el sistema es la facilidad que proporciona un servicio online frente a la alternativa clásica del servicio de mensajería, además de que esperan un menor coste.\\ \\
+				\textit{Persona Ficticia: Ana es una joven de 26 años que tras haber estado trabajando desde hace unos años por fin ha conseguido reunir el dinero suficiente como para comprarse un coche. Debido a esto la ha surgido la dificultad de cómo recibirlo ya que la marca que ha elegido no tiene un concesionario en su ciudad y el más cercano no se hace cargo de este problema. Ana recuerda que hace poco vió un anuncio en la televisión sobre un nuevo sistema de transportes que cree que podría ayudarla con dicho problema.}
+
+		\end{itemize}
+
+
+	\section{Escenarios del sistema futuro:}
+
+		\paragraph{}
+		Los escenarios expuestos para el sistema son los siguientes:
+
+		\begin{itemize}
+			\item \textbf{Escenario 1:} \\
+				Miguel es un camionero que ha oido hablar del sistema, por lo que se decide probar su funcionamiento dado que ha oido muy buenos comentarios sobre él. Nunca antes lo había probado, por lo que crea una cuenta en el sistema indicando que es transportista. Para ello introduce sus datos personales, además del número de licencia de transporte y las características de la mercancía que es capáz de transportar. Una vez creada la cuenta lo siguiente que hace en el sistema es buscar envíos. Para ello introduce su localización actual y el sistema le muestra un listado de las envíos que puede realizar, ofreciendole la posibilidad de pujar por ello. Dado que Miguel quiere probar el sistema se decide a pujar por unos cuantos envíos para probar la utilidad del sistema. Una vez hecho esto, tendrá que esperar hasta que alguna de las pujas sea aceptada.
+
+			\item \textbf{Escenario 2:} \\
+				Teresa es una usuaria habitual del sistema, el cuál utiliza para envíar cosas a su familia y amigos dado que le ofrece la facilidad de poder realizar todos los trámites online. Teresa ha decidido mudarse de casa el próximo mes, para lo que utilizará el sistema para trasladar todos sus bienes a su nueva casa. Lo que hará será por tanto crear un nuevo envío para lo cual tendrá que introducir las direcciones de origen y destino así como el tamaño y peso aproximados del envío. Una vez hecho esto espera a que algún transportista ofrezca una puja sobre el envío. En el momento en el que encuentre un precio que esté dispuesta a aceptar y las valoraciones del transportista la convenzan aceptará dicha puja. Durante todo el proceso de envío tanto el transportista como ella podrá interactuar a través de hitos y comentarios sobre el transporte. Una vez finalizado el envío Teresa podrá introducir una valoración acerca del transportista que después otros usuarios podrán visualizar en el momento de aceptar las pujas.
+
+			\item \textbf{Escenario 3:} \\
+				Oscar acaba de comprar una nueva consola a través de internet. La web a través de la cual ha realizado la compra utiliza el sistema para llevar a cabo el transporte, por lo cual le ha enviado un enlace para que pueda monitorizar el proceso. Dado que Oscar todavía no tiene una cuenta en el sistema lo primero que hará será registrarse en el mismo introduciendo sus datos personales, pero omitiendo seleccionar que es un tranportista. Una vez hecho esto podrá consultar su envío a la vez que introducir hitos y comentarios sobre él, que tanto el transportista que lo traslade como el remitente (en este caso la web) podrán visualizar. Una vez finalizado el envío Oscar podrá valorar al transportista.
+
+		\end{itemize}
+
+
+
 
 	\section{Casos de uso implementados}
 
