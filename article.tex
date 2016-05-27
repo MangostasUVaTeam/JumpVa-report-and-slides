@@ -16,16 +16,6 @@
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
-\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
 \usepackage{fancyhdr} % Headers and footers
 \pagestyle{fancy} % All pages have headers and footers
 \fancyhead{} % Blank out the default header
@@ -49,23 +39,45 @@
 \normalsize Universidad de Valladolid \\ % Your institution
 \vspace{-5mm}
 }
-\date{}
+\date{Mayo 2016}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+	\begin{titlepage}
+	\centering
+		%\includegraphics[width=0.15\textwidth]{example-image-1x1}\par\vspace{1cm}
+		{\scshape\LARGE Universidad de Valladolid \par}
+		\vspace{1cm}
+		{\scshape\Large Informe Final\par}
+		\vspace{1.5cm}
+		{\huge\bfseries JumpVa\par}
+		\vspace{2cm}
+		{\large
+		\textsc{Alberto Amigo Alonso\textsubscript{20\%}}\\[2mm] % Your name
+		\textsc{Sergio Delgado Álvarez\textsubscript{20\%}}\\[2mm] % Your name
+		\textsc{Sergio García Prado\textsubscript{20\%}}\\[2mm] % Your name
+		\textsc{Oscar Fernández Angulo\textsubscript{20\%}}\\[2mm] % Your name
+		\textsc{Silvia Rodriguez Ares\textsubscript{20\%}}\\[2mm] % Your name
+		\vspace{-5mm}
+		}
+		\vfill
+		Servicio web destinado a permitir a remitentes y destinatarios ofertar envíos para que los transportistas sean capaces de encontrarlos permitiendo a todos los usuarios monitorizarlos
 
-	\maketitle % Insert title
+		\vfill
+
+	% Bottom of the page
+		{\large \today\par}
+	\end{titlepage}
 
 	\thispagestyle{fancy} % All pages have headers and footers
 
 %----------------------------------------------------------------------------------------
-%	ABSTRACT
+%	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-	\begin{abstract}
-		\noindent Servicio web destinado a permitir a remitentes y destinatarios ofertar envíos para que los transportistas sean capaces de encontrarlos permitiendo a todos los usuarios monitorizarlos.
-	\end{abstract}
+	\tableofcontents
+	\newpage
 
 %----------------------------------------------------------------------------------------
 %	TEXT
